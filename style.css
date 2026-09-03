@@ -254,7 +254,7 @@ section {
 
 /* GRID DOS PRODUTOS */
 
-.menu .box-container {
+.box-container {
     display: grid;
 
     grid-template-columns:
