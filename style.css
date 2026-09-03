@@ -277,6 +277,7 @@ section {
     border-radius: 0.5rem;
 
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* EFEITO CARD */
@@ -373,6 +374,15 @@ section {
 
     object-fit: cover;
 }
+.menu .box-container .box img{
+    height: 10rem;
+}
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem ;
+    padding: 1rem 0;
+}
+
 
 /* CONTEÚDO SOBRE */
 
