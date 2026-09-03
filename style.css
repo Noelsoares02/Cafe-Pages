@@ -1,4 +1,10 @@
+
 @charset "UTF-8";
+
+/* ==============================
+   VARIÁVEIS
+================================= */
+
 :root {
     --main-color: #d3ad7f;
     --black: #13131a;
@@ -6,46 +12,141 @@
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
     --font-size: 10px;
 }
+
+/* ==============================
+   RESET
+================================= */
+
 * {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
     text-decoration: none;
-   text-transform: none;
-    list-style: capitalize;
+    text-transform: none;
+    list-style: none;
+    box-sizing: border-box;
     transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
 }
+
+/* ==============================
+   BODY
+================================= */
+
+html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--bg);
+    color: #fff;
 }
+
+/* ==============================
+   SECTION
+================================= */
+
 section {
-    padding: 3rem  2rem;
+    padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
 }
+
+/* ==============================
+   HEADER
+================================= */
+
 .header {
-    position:fixed;
-    top:0; left:0; right:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 99;
+
+    background-color: rgba(1, 1, 3, 0.95);
     border-bottom: var(--border);
-    
+    backdrop-filter: blur(8px);
 }
+
 .header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem ;
-    padding-bottom: 1rem;
+
+    padding: 1.5rem 2rem;
 }
+
+/* ==============================
+   NAVBAR
+================================= */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
 .navbar a {
-    margin: 0 1rem;
-    font-size: 0.8rem;
-    color:#ffffff;
+    font-size: 1.6rem;
+    color: #ffffff;
 }
+
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
+/* ==============================
+   ÍCONES
+================================= */
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: scale(1.15);
+    width: 32px;
+    height: 32px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    .header section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+        margin: 0 0.7rem;
+    }
+
+    .icons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
