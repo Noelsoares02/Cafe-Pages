@@ -23,7 +23,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: none;
+    text-transform: capitalize;
     list-style: none;
     box-sizing: border-box;
     transition: 0.2s linear;
@@ -104,23 +104,29 @@ section {
 /* ==============================
    ÍCONES
 ================================= */
-
 .icons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
+    gap: 20px;
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icons img {
-    margin: 1rem;
+    width: 30px;
+    height: 30px;
+    display: block;
     cursor: pointer;
+    filter: none;
+    transition: 0.3s;
 }
 
 .icons img:hover {
-    transform: scale(1.15);
-    width: 32px;
-    height: 32px;
+    transform: scale(1.2);
 }
 
 /* ==============================
