@@ -88,7 +88,8 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 100%;
+
+    flex: 1;
 }
 
 .navbar a {
@@ -101,9 +102,7 @@ section {
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
-/* ==============================
-   ÍCONES
-================================= */
+
 /* ==============================
    ÍCONES
 ================================= */
@@ -138,9 +137,32 @@ section {
     padding: 0.8rem 2rem;
 }
 .home-container {
-    background: url("./images/home-bg.jpg") no-repeat;
-    background-size: cover;
+    background: url("./img/home-img.jpg") no-repeat;
+    
+    background-size: cover; 
+    background-position: center;
 }
+.home-container section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+.content {
+    max-width: 60rem;
+    }
+
+    .content h3 {
+        font-size: 4rem;
+        color: #fff;
+       font-size: 6rem;
+        
+    }
+    .content p {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 300px;
+    }
 /* ==============================
    RESPONSIVIDADE
 ================================= */
